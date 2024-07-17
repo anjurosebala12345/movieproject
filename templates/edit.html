@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <br><center><h4>Edit Movie</h4>
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>{{ form.name }}</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{ form.desc}}</td>
+      </tr>
+      <tr>
+        <th>Year</th>
+        <td>{{ form.year }}</td>
+      </tr>
+      <tr>
+        <th>Image</th>
+        <td>{{ form.image }}</td>
+      </tr>
+      <tr>
+        <td colspan="2"> <button type="submit">Save</button></td>
+      </tr>
+    </table></center>
+
+  </form>
+{% endblock %}
